@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>UTS Car Renting</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <h2 style="color: white">Yuhui Liu's Renting car system</h2>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="slide3.jpg" alt="Los Angeles" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="slides2.jpg" alt="Chicago" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="slides1.png" alt="New York" width="1100" height="500">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<!--&lt;!&ndash; Main jumbotron for a primary marketing message or call to action &ndash;&gt;-->
+<!--<div class="jumbotron">-->
+<!--    <div class="container">-->
+<!--        <h1>Dear Customers,</h1>-->
+<!--        <p></p>-->
+<!--        <p>Are you still worried about any inconvience of going out without a car? Our system provides the best services with SUPER affordable price.</p>-->
+<!--&lt;!&ndash;        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>&ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+<!--  *******************************car information start from here*************************************************************************************************-->
+<div class="container" id="container">
+    <div id="display" class="row mt-3">
+
+
+
+    </div>
+
+
+
+</div>
+<hr>
+<footer>
+    <p>&copy; 2019 YUHUI LIU</p>
+</footer>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                displayCarDate(this);
+            }
+        };
+        xhttp.open("GET", "CarDate.xml", true);
+        xhttp.send(null);
+
+    function displayCarDate(xml) {
+
+        // window.alert("4");
+
+            var carList = xml.responseXML.getElementsByTagName('product');
+
+            for (var i = 0; i < carList.length; i++) {
+                        // xlist = carList.childNodes[i];
+                var txt = "";
+
+                    for (var j = 0; j < carList[i].childNodes.length; j++) {
+                        if (carList[i].childNodes[j].nodeType == 1){
+
+                            txt +=  j + carList[i].childNodes[j].nodeName + "    :    " + carList[i].childNodes[j].textContent + "<br>";
+
+                        }
+                    }
+
+                var div1 = document.createElement('div');
+                div1.className ='col-md-4 mb-4';
+                div1.style = "border: groove";
+
+                // var form = document.createElement('form');
+                // form.setAttribute('name','carForm');
+                // form.setAttribute('action','checkIfAvailable.php');
+                // form.setAttribute('method','post');
+                // form.setAttribute('targer','_self')
+                // form.setAttribute('onsubmit','retrn handleCheck(carList[i].childNodes[3].textContent)');
+
+
+                var div2 = document.createElement('div');
+                div2.className ='card text-center';
+                div2.style = "width: 18rem;";
+
+                var img = document.createElement("img");
+                img.className="card-img-top";
+                img.src = carList[i].childNodes[7]. textContent+".jpg";
+                img.className = "card-img-top img-fluid";
+                img.style = "height: 200px";
+
+                var div3 = document.createElement('div');
+                div3.className = 'card-body';
+                div3.style="padding-top: 50px; padding-bottom: 50px;";
+
+
+                var div4 = document.createElement('div');
+                div4.className = 'card-title';
+                 var title = document.createElement('h3');
+                 title.innerHTML = carList[i].childNodes[7].textContent;
+
+                var h5 = document.createElement('h4');
+                h5.innerHTML = txt;
+
+                var bookButton = document.createElement('button');
+                bookButton.className = "btn btn-danger";
+                bookButton.innerHTML = "Book Now";
+                bookButton.onclick = add();
+                bookButton.className = "btn btn-danger";
+
+
+                // div.appendChild(div1);
+                div1.appendChild(div2);
+                // form.appendChild(div2);
+                div2.appendChild(img);
+                div2.appendChild(div3);
+                div3.appendChild(title);
+                div3.appendChild(h5);
+                div3.appendChild(bookButton);
+
+
+                document.getElementById("display").appendChild(div1);
+
+            }
+    }
+
+        // window.alert("4");
+        function add () {
+            alert("hahaha");
+        }
+
+</script>

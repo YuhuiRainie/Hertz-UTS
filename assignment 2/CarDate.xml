@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+    <product Category="Sedan">
+        <id>1</id>
+        <Availability>Y</Availability>
+        <Brand>Toyota</Brand>
+        <Model>Camry</Model>
+        <Year>2013</Year>
+        <Mileage>20000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>120</PricePerDay>
+    </product>
+    <product Category="Wagon">
+        <id>2</id>
+        <Availability>Y</Availability>
+        <Brand>Volkswagen</Brand>
+        <Model>Golf</Model>
+        <Year>2016</Year>
+        <Mileage>15000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>150</PricePerDay>
+    </product>
+    <product Category="SUV">
+        <id>3</id>
+        <Availability>N</Availability>
+        <Brand>Holden</Brand>
+        <Model>Captiva</Model>
+        <Year>2017</Year>
+        <Mileage>19000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>130</PricePerDay>
+    </product>
+    <product Category="Sedan">
+        <id>4</id>
+        <Availability>Y</Availability>
+        <Brand>BMW</Brand>
+        <Model>320i</Model>
+        <Year>2016</Year>
+        <Mileage>11000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>125</PricePerDay>
+    </product>
+    <product Category="SUV">
+        <id>5</id>
+        <Availability>N</Availability>
+        <Brand>Suzuki</Brand>
+        <Model>Jimny</Model>
+        <Year>2018</Year>
+        <Mileage>14000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>155</PricePerDay>
+    </product>
+    <product Category="SUV">
+        <id>6</id>
+        <Availability>Y</Availability>
+        <Brand>Hyundai</Brand>
+        <Model>Sonata</Model>
+        <Year>2013</Year>
+        <Mileage>13000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>160</PricePerDay>
+    </product>
+    <product Category="SUV">
+        <id>7</id>
+        <Availability>Y</Availability>
+        <Brand>Nissan</Brand>
+        <Model>X-trail</Model>
+        <Year>2012</Year>
+        <Mileage>9000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>165</PricePerDay>
+    </product>
+    <product Category="SUV">
+        <id>8</id>
+        <Availability>N</Availability>
+        <Brand>Jeep</Brand>
+        <Model>Cherokee</Model>
+        <Year>2016</Year>
+        <Mileage>18000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>135</PricePerDay>
+    </product>
+    <product Category="Sedan">
+        <id>9</id>
+        <Availability>Y</Availability>
+        <Brand>Honda</Brand>
+        <Model>Civic</Model>
+        <Year>2015</Year>
+        <Mileage>17000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>140</PricePerDay>
+    </product>
+    <product Category="SUV">
+        <id>10</id>
+        <Availability>Y</Availability>
+        <Brand>Benz</Brand>
+        <Model>GLC</Model>
+        <Year>2017</Year>
+        <Mileage>16000</Mileage>
+        <FuelType>petrol</FuelType>
+        <Seats>5</Seats>
+        <PricePerDay>145</PricePerDay>
+    </product>
+</cars>
