@@ -180,7 +180,10 @@
                 bookButton.className = "btn btn-danger";
                 bookButton.id = carList[i].childNodes[1].textContent;
                 bookButton.innerHTML = "Book Now";
-                bookButton.addEventListener("click", book);
+                // bookButton.addEventListener("click", book);
+                bookButton.onclick = function () {
+                    book(this);
+                }
 
 
                 // div.appendChild(div1);
@@ -199,10 +202,10 @@
     }
 
         // window.alert("4");
-        function book () {
-            window.alert("ha");
-            var elmnt = document.getElementsByTagName("button")[0];
-            var id = elmnt.getAttributeNode("id").value;
+        function book (button) {
+            // var elmnt = document.getElementsByTagName("button")[0];
+            // var id = elmnt.getAttributeNode("id").value;
+            var id = button.getAttributeNode("id").value;
 
             window.alert(id);
             // if (xhttp) {
