@@ -129,13 +129,11 @@
             for (var i = 0; i < carList.length; i++) {
                         // xlist = carList.childNodes[i];
                 var txt = "";
-                var id = 0;
 
                     for (var j = 0; j < carList[i].childNodes.length; j++) {
                         if (carList[i].childNodes[j].nodeType == 1){
 
                             txt +=  j + carList[i].childNodes[j].nodeName + "    :    " + carList[i].childNodes[j].textContent + "<br>";
-
 
                         }
                     }
@@ -178,9 +176,9 @@
 
                 var bookButton = document.createElement('button');
                 bookButton.className = "btn btn-danger";
-                bookButton.id = carList[i].childNodes[1].textContent;
                 bookButton.innerHTML = "Book Now";
                 bookButton.addEventListener("click", book);
+                bookButton.id = carList[i].childNodes[1].textContent;
 
 
                 // div.appendChild(div1);
@@ -201,28 +199,26 @@
         // window.alert("4");
         function book () {
             window.alert("ha");
-            var elmnt = document.getElementsByTagName("button")[0];
-            window.alert(elmnt.innerHTML);
-            var id = elmnt.getAttributeNode("id").value;
-
+           var x = document.getElementsByClassName("btn btn-danger");
+           var id = x.getAttribute("id");
             window.alert(id);
-            // if (xhttp) {
-            //     xhttp.open('get', 'availability.php?id=' + id);
-            //     xhttp.onreadystatechange = function () {
-            //         if (this.readyState == 4 && this.status == 200) {
-            //             handleCheck(this);
-            //         }
-            //     };
-            //     xhttp.send();
-            // }
+            if (xhttp) {
+                xhttp.open('get', 'availability.php?id=' + id);
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        handleCheck(this);
+                    }
+                };
+                xhttp.send();
+            }
         }
-        // function handleCheck(xml) {
-        //     if (xml.responseText == "Y") {
-        //         alert("Add car to shopping cart successfully");
-        //     } else {
-        //         alert("Sorry, the car is not available now. Please try other cars.");
-        //     }
-        // }
+        function handleCheck(xml) {
+            if (xml.responseText == "Y") {
+                alert("Add car to shopping cart successfully");
+            } else {
+                alert("Sorry, the car is not available now. Please try other cars.");
+            }
+        }
 
 
 </script>
