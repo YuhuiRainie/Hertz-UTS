@@ -9,7 +9,7 @@
         <Mileage>20000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>120</PricePerDay>
+        <PricePerDay>70</PricePerDay>
     </product>
     <product Category="Wagon">
         <id>2</id>
@@ -20,7 +20,7 @@
         <Mileage>15000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>150</PricePerDay>
+        <PricePerDay>75</PricePerDay>
     </product>
     <product Category="SUV">
         <id>3</id>
@@ -31,7 +31,7 @@
         <Mileage>19000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>130</PricePerDay>
+        <PricePerDay>150</PricePerDay>
     </product>
     <product Category="Sedan">
         <id>4</id>
@@ -42,7 +42,7 @@
         <Mileage>11000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>125</PricePerDay>
+        <PricePerDay>65</PricePerDay>
     </product>
     <product Category="SUV">
         <id>5</id>
@@ -53,7 +53,7 @@
         <Mileage>14000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>155</PricePerDay>
+        <PricePerDay>50</PricePerDay>
     </product>
     <product Category="SUV">
         <id>6</id>
@@ -64,7 +64,7 @@
         <Mileage>13000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>160</PricePerDay>
+        <PricePerDay>80</PricePerDay>
     </product>
     <product Category="SUV">
         <id>7</id>
@@ -75,7 +75,7 @@
         <Mileage>9000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>165</PricePerDay>
+        <PricePerDay>85</PricePerDay>
     </product>
     <product Category="SUV">
         <id>8</id>
@@ -97,7 +97,7 @@
         <Mileage>17000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>140</PricePerDay>
+        <PricePerDay>100</PricePerDay>
     </product>
     <product Category="SUV">
         <id>10</id>
@@ -108,6 +108,6 @@
         <Mileage>16000</Mileage>
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
-        <PricePerDay>145</PricePerDay>
+        <PricePerDay>200</PricePerDay>
     </product>
 </cars>

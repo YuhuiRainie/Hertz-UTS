@@ -30,16 +30,16 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <h2 style="color: white">Yuhui Liu's Renting car system</h2>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
         </ul>
+        <div style="position: absolute;right: 10px;top: 5px;">
+        <ul class="nav navbar-nav navbar-right hidden-sm" >
+            <form action="cart.php">
+
+                <input type="submit"class="btn btn-light"value="Cart">
+            </form>
+
+        </ul>
+        </div>
     </nav>
 
 
@@ -103,7 +103,7 @@
 </div>
 <hr>
 <footer>
-    <p>&copy; 2019 YUHUI LIU</p>
+    <p align="middle">&copy; 2019 YUHUI LIU</p>
 </footer>
 
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
@@ -134,7 +134,7 @@
                     for (var j = 0; j < carList[i].childNodes.length; j++) {
                         if (carList[i].childNodes[j].nodeType == 1){
 
-                            txt +=  j + carList[i].childNodes[j].nodeName + "    :    " + carList[i].childNodes[j].textContent + "<br>";
+                            txt += carList[i].childNodes[j].nodeName + "    :    " + carList[i].childNodes[j].textContent + "<br>";
 
 
                         }
@@ -144,12 +144,6 @@
                 div1.className ='col-md-4 mb-4';
                 div1.style = "border: groove";
 
-                // var form = document.createElement('form');
-                // form.setAttribute('name','carForm');
-                // form.setAttribute('action','checkIfAvailable.php');
-                // form.setAttribute('method','post');
-                // form.setAttribute('targer','_self')
-                // form.setAttribute('onsubmit','retrn handleCheck(carList[i].childNodes[3].textContent)');
 
 
                 var div2 = document.createElement('div');
@@ -180,7 +174,6 @@
                 bookButton.className = "btn btn-danger";
                 bookButton.id = carList[i].childNodes[1].textContent;
                 bookButton.innerHTML = "Book Now";
-                // bookButton.addEventListener("click", book);
                 bookButton.onclick = function () {
                     book(this);
                 }
@@ -203,23 +196,26 @@
 
         // window.alert("4");
         function book (button) {
-            // var elmnt = document.getElementsByTagName("button")[0];
-            // var id = elmnt.getAttributeNode("id").value;
+
             var id = button.getAttributeNode("id").value;
 
-            window.alert(id);
-            // if (xhttp) {
-            //     xhttp.open('get', 'availability.php?id=' + id);
-            //     xhttp.onreadystatechange = function () {
-            //         if (this.readyState == 4 && this.status == 200) {
-            //             handleCheck(this);
-            //         }
-            //     };
-            //     xhttp.send();
-            // }
+            var xhttp2 = new XMLHttpRequest();
+
+                xhttp2.open('GET', 'availability.php?id=' + id,true);
+                xhttp2.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        if (this.responseText == "Y") {
+                            alert("Add car to shopping cart successfully");
+                        } else {
+                            alert("Sorry, the car is not available now. Please try other cars.");
+                        }
+                    }
+                };
+
+            xhttp2.send();
         }
-        // function handleCheck(xml) {
-        //     if (xml.responseText == "Y") {
+        // function availableCheck(returnedText) {
+        //     if (returnedText.responseText == "Y") {
         //         alert("Add car to shopping cart successfully");
         //     } else {
         //         alert("Sorry, the car is not available now. Please try other cars.");

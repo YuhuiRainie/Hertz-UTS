@@ -4,20 +4,20 @@ $id = $_GET["id"];
 session_start();
 
 // retrieve xml database
-$xml = simplexml_load_file("../../database/cars.xml") or die("Error: Cannot create Object");
+$xml = simplexml_load_file("CarDate.xml") or die("Error: Cannot create Object");
 foreach ($xml->children() as $cars) {
     if (($id == $cars->id) && ("Y" == $cars->Availability)){
         // add item to shopping cart
         $car_detail = array(
+            "id" => (int)$cars->id,
             "Mileage" => (string) $cars->Mileage,
             "FuelType" => (string) $cars->FuelType,
             "Seats" => (string) $cars->Seats,
-            "Description" => (string) $cars->Description,
             "Brand" => (string) $cars->Brand,
             "Model" => (string) $cars->Model,
             "Year" => (string) $cars->Year,
             "PricePerDay" => (int) $cars->PricePerDay,
-            "RentalDays" => 1
+            "rentDay" => 1
         );
         if (!isset($_SESSION["cart"])) {
             $_SESSION["cart"] = array($id => $car_detail);
