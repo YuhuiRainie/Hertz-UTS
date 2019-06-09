@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// calculate total payment
 $total = 0;
 $rentalDays = $_REQUEST["rentDay"];
 $index = 0;

@@ -10,6 +10,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>70</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="Wagon">
         <id>2</id>
@@ -21,6 +22,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>75</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="SUV">
         <id>3</id>
@@ -32,6 +34,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>150</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="Sedan">
         <id>4</id>
@@ -43,6 +46,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>65</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="SUV">
         <id>5</id>
@@ -54,6 +58,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>50</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="SUV">
         <id>6</id>
@@ -65,6 +70,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>80</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="SUV">
         <id>7</id>
@@ -76,6 +82,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>85</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="SUV">
         <id>8</id>
@@ -87,6 +94,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>135</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="Sedan">
         <id>9</id>
@@ -98,6 +106,7 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>100</PricePerDay>
+        <Description>Excellent</Description>
     </product>
     <product Category="SUV">
         <id>10</id>
@@ -109,5 +118,6 @@
         <FuelType>petrol</FuelType>
         <Seats>5</Seats>
         <PricePerDay>200</PricePerDay>
+        <Description>Excellent</Description>
     </product>
 </cars>

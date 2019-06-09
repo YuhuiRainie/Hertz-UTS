@@ -77,17 +77,6 @@
     </a>
 </div>
 
-<!--&lt;!&ndash; Main jumbotron for a primary marketing message or call to action &ndash;&gt;-->
-<!--<div class="jumbotron">-->
-<!--    <div class="container">-->
-<!--        <h1>Dear Customers,</h1>-->
-<!--        <p></p>-->
-<!--        <p>Are you still worried about any inconvience of going out without a car? Our system provides the best services with SUPER affordable price.</p>-->
-<!--&lt;!&ndash;        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>&ndash;&gt;-->
-<!--    </div>-->
-<!--</div>-->
-
-
 
 
 <!--  *******************************car information start from here*************************************************************************************************-->
@@ -127,7 +116,6 @@
             var carList = xml.responseXML.getElementsByTagName('product');
 
             for (var i = 0; i < carList.length; i++) {
-                        // xlist = carList.childNodes[i];
                 var txt = "";
                 var id = 0;
 
@@ -178,10 +166,7 @@
                     book(this);
                 }
 
-
-                // div.appendChild(div1);
                 div1.appendChild(div2);
-                // form.appendChild(div2);
                 div2.appendChild(img);
                 div2.appendChild(div3);
                 div3.appendChild(title);
@@ -194,7 +179,6 @@
             }
     }
 
-        // window.alert("4");
         function book (button) {
 
             var id = button.getAttributeNode("id").value;
@@ -214,13 +198,5 @@
 
             xhttp2.send();
         }
-        // function availableCheck(returnedText) {
-        //     if (returnedText.responseText == "Y") {
-        //         alert("Add car to shopping cart successfully");
-        //     } else {
-        //         alert("Sorry, the car is not available now. Please try other cars.");
-        //     }
-        // }
-
 
 </script>
